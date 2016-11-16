@@ -1,8 +1,8 @@
 #!/bin/bash
     case "${TOXENV}" in
         WIN)
-	  export CXX=i686-w64-mingw32-g++
-	  export CC=i686-w64-mingw32-gcc
+	  unset CXX
+	  unset CC
 	  mkdir build
 	  cd build
 	  cmake .. -DCMAKE_TOOLCHAIN_FILE=toolchain-i686-w64-mingw32.cmake
