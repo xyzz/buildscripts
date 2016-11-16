@@ -5,7 +5,7 @@
 	  unset CC
 	  mkdir build
 	  cd build
-	  cmake .. -DCMAKE_TOOLCHAIN_FILE=toolchain-i686-w64-mingw32.cmake
+	  cmake .. -DCMAKE_TOOLCHAIN_FILE=toolchain-x86_64-w64-mingw32.cmake
 	  make tarball
           ;;
         *)
