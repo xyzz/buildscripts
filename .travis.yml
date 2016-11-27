@@ -5,12 +5,7 @@ matrix:
     - os: linux
       dist: trusty
       sudo: required
-    - os: linux
-      dist: trusty
-      sudo: required
       env: TOXENV=WIN
-    - os: osx
-      osx_image: xcode8
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y cmake git build-essential autoconf texinfo bison flex  mingw-w64; fi

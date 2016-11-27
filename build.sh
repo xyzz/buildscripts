@@ -11,6 +11,9 @@ touch $BUILD_OUTPUT
 dump_output() {
    echo Tailing the last 500 lines of output:
    tail -500 $BUILD_OUTPUT
+   echo "Uploading output via curl"
+   curl -F"file=@$BUILD_OUTPUT" https://0x0.st || true
+   curl -F"file=@build/gcc-complete-prefix/src/gcc-complete-build/arm-vita-eabi/libgcc/config.log" https://0x0.st || true
 }
 error_handler() {
   echo ERROR: An error was encountered with the build.

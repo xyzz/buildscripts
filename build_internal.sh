@@ -6,7 +6,7 @@
 	  mkdir build
 	  cd build
 	  cmake .. -DCMAKE_TOOLCHAIN_FILE=toolchain-x86_64-w64-mingw32.cmake
-	  make tarball
+	  make -j4 tarball
           ;;
         *)
 	  mkdir build
